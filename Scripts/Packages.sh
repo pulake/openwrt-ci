@@ -65,9 +65,10 @@ UPDATE_PACKAGE "quickfile" "sbwml/luci-app-quickfile" "main"
 UPDATE_PACKAGE "timecontrol" "sirpdboy/luci-app-timecontrol" "main"
 UPDATE_PACKAGE "viking" "VIKINGYFY/packages" "main" "" "gecoosac luci-app-timewol luci-app-wolplus"
 
-# 新增 OpenAppFilter (luci-app-appfilter + oaf)
-UPDATE_PACKAGE "open-app-filter" "destan19/OpenAppFilter" "master" "" "luci-app-appfilter oaf"
-
+# ========== 新增：OAF应用过滤 + rtp2httpd ==========
+ UPDATE_PACKAGE "OpenAppFilter" "destan19/OpenAppFilter" "master" "" "oaf luci-app-oaf"
+ UPDATE_PACKAGE "rtp2httpd" "stackia/rtp2httpd" "main"
+ 
 #更新软件包版本
 UPDATE_VERSION() {
 	local PKG_NAME=$1
