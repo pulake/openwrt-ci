@@ -68,3 +68,11 @@ if [[ "${WRT_TARGET^^}" == *"QUALCOMMAX"* ]]; then
 	#其他调整
 	echo "CONFIG_PACKAGE_kmod-usb-serial-qualcomm=y" >> ./.config
 fi
+# 强制启用 OAF 应用过滤
+echo "CONFIG_PACKAGE_luci-app-oaf=y" >> .config
+echo "CONFIG_PACKAGE_appfilter=y" >> .config
+echo "CONFIG_PACKAGE_kmod-oaf=y" >> .config
+
+# 强制启用 rtp2httpd
+echo "CONFIG_PACKAGE_luci-app-rtp2httpd=y" >> .config
+echo "CONFIG_PACKAGE_rtp2httpd=y" >> .config
